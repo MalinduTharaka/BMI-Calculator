@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="c1">
+        
+        <h1 id="title1">BMI Calculator</h1>
+
+        <div>
+            <P id="p1">Enter your name :</P>
+            <input type="text" id="t1" >
+        </div>
+
+        <div>
+        <p id="p2">Select Gender</p>
+            <select id="Genders" name="Genders">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <div>
+            <P id="p2">Enter your age :</P>
+            <input type="number" id="t2" min="1" max="125" >
+        </div>
+
+        <div>
+            <P id="p3">Enter your Height :</P>
+            <select id="Measures" name="measures">
+                <option value="Feet" onclick="changemeasure1()">Feet</option>
+                <option value="Centimeter" onclick="changemeasure2()">Centimeter</option>
+            </select>
+            <input type="text" id="t3" style="display: block;" required> &nbsp; <input type="text" id="t4" style="display: block;" required> <input type="text" id="t5" style="display: none;" required>
+        </div>
+
+        <div>
+            <p id="p4">Enter your Weight :</p>
+            <input type="text" id="t6">
+        </div>
+
+        <br><button id="b1" onclick="bmivalue(),ch(),ranges()">Calculate BMI</button><br>
+        <button id="b2" style="display: none;" onclick="ag()">Calculate BMI again</button>
+
+        
+    </div>
+
+    <div class="container" id="c2" style="display:none;">
+        <h1 id="title2">BMI Range</h1>
+        <p id="p5"></p>
+        <p id="p6"></p>
+        <div class="row">
+            <img id="rangeImg" src="" alt="Displayed Image">
+            <p id="p7"></p><br>
+        </div>
+        <button id="b3" onclick="ag()">Calculate BMI again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
